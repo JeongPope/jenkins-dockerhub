@@ -7,7 +7,7 @@ node {
          app = docker.build("jeongpope/jenkins-dockerhub")
      }
      stage('Push') {
-         docker.withRegistry('https://registry.hub.docker.com', 'docker_hub') {
+         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
              app.push("${env.BUILD_NUMBER}")
              app.push("latest")
          }
