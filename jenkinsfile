@@ -3,7 +3,6 @@ node {
          checkout scm
      }
      stage('Build') {
-         # app = docker.build("<githubID>/<Repository>")
          app = docker.build("jeongpope/jenkins-dockerhub")
      }
      stage('Push') {
